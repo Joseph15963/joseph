@@ -1,0 +1,155 @@
+html, body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  height: 100%;
+  background-image: url('bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 98%;
+  position: relative;
+}
+
+header.navbar {
+  height: 70px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 98%;
+  z-index: 999;
+  background-color: #111;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.navbar a {
+    text-decoration: none;  
+    color: inherit; 
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px;
+  position: relative;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  border-bottom: 2px solid red;
+}
+
+.burger {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: white;
+
+}
+header.navbar h1 {
+  color: white;
+  margin: 20px;
+  font-size: 1.5rem;
+}
+
+nav.dropdown {
+  position: relative;
+  margin-right: 10px;
+}
+
+nav.dropbtn {
+  font-size: 80px;      
+  color: white;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 12px 16px; 
+  border-radius: 10px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  padding: 12px 9px;
+  background-color: #f9f9f9;
+  min-width: 120px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  overflow: hidden;
+  z-index: 1000;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+nav.dropdown:hover .dropdown-content {
+   display: block;
+}
+
+footer.footer {
+  background-color: transparent;
+  color: black;
+  text-align: center;
+  padding: -50px;
+  font-size: 0.9rem;
+  margin-top: auto;
+}
+
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background-color: #111;
+    flex-direction: column;
+    width: 30%;
+    padding: 10px 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .burger {
+    display: block;
+    position: relative;
+    z-index: 1001; 
+    color: white;
+    padding: 25px;
+  }
+}

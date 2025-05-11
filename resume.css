@@ -1,0 +1,20 @@
+#main-content {
+  text-align: center; 
+  padding: 80px;
+  animation: fadeSlideIn 0.9s ease-in-out;
+}
+
+.text{
+    font-size: 2rem;
+    padding: 35px;
+    text-align: center;
+    text-decoration: underline;
+}
+
+#main-content img {
+  max-width: 50%;
+  display: inline-block; 
+  margin: 20px auto;
+  border: 2px solid #ccc; 
+  border-radius: 10px;
+}
